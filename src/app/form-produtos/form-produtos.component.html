@@ -1,0 +1,24 @@
+<h3>Formulário de Produtos</h3>
+<div>
+    <label for="id">ID:</label>
+    <input type="number" [(ngModel)]="produto.id" id="id" placeholder="id ...">
+    <br />
+
+    <label for="nome">NOME:</label>
+    <input [(ngModel)]="produto.nome" id="nome" placeholder="nome do produto ...">
+    <br />
+
+    <label for="preco">PRECO:</label>
+    <input type="number" [(ngModel)]="produto.preco" id="preco" placeholder="preço ...">
+    <br />
+
+    <button (click)="cadastrar()" >CADASTRAR</button>
+</div>
+
+{{produto | json}}
+<br />
+<ul>
+    <li *ngFor="let prod of listProdutos">
+        {{prod | json}}
+    </li>
+</ul>
